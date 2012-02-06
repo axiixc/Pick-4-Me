@@ -1,0 +1,38 @@
+:javascript
+    function delRest(name) {
+        if (confirm('Delete Restaurant\n"' + name + '"'))
+            document.location = '#{url('/delete/')}' + escape(name);
+    }
+
+.wrap
+    %table.bar
+        %tr
+            %td.left
+                %a{ :href => url('/') } &larr; Back
+            %td.center
+                %h1 Edit Restaurants
+            %td.right &nbsp;
+
+%form.wrap{ :method => :post, :action => url('/add') }
+    %table.list
+        %tr
+            %td.n
+                %input{ :type => :text, :name => :name, :placeholder => :name }
+            %td.w
+                %input{ :type => :text, :name => :weight, :placeholder => :weight, :value => 1 }
+        %tr
+            %td.l{ :colspan => 2 }
+                %input{ :type => :submit, :value => '✓ add restaurant' }
+
+%form.wrap{ :method => :post, :action => url('/update') }
+    %table.list
+        - @restaurants.each do |name, weight|
+            %tr
+                %td.n
+                    %input{ :type => :text, :name => :'name[]', :placeholder => name, :value => name }
+                %td.w
+                    %input{ :type => :text, :name => :'weight[]', :placeholder => weight, :value => weight }
+                %td.d{ :onclick => "delRest(\"#{name.sub('"', '\\"')}\");" } &#xd7;
+        %tr
+            %td.l{ :colspan => 3 }
+                %input{ :type => :submit, :value => '✓ save restaurants' }

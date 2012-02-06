@@ -1,0 +1,9 @@
+%div{ :style => 'margin: -4% 4%; height: 100%;' }
+    %table{ :style => 'height: 100%; width: 100%;' }
+        %tr
+            %td.stage{ :colspan => 4, :onclick => "window.location=\"#{url('/')}\";" }= @name
+        %tr
+            %td.action{ :onclick => "window.location=\"#{url('/upvote/' + URI.escape(@name))}\";", :style => 'border-right: none;' } &#x2713;
+            %td.action{ :onclick => "window.location=\"#{url('/downvote/' + URI.escape(@name))}\";" } &#xd7;
+            %td= "Rank #{@rank}"
+            %td.action{ :onclick => "window.location=\"#{url('/edit')}\";", :style => 'text-align: right;' } Edit

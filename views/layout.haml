@@ -1,0 +1,28 @@
+- @title ||= "Pick4Me"
+
+!!!
+%html
+%head
+    %title= @title
+    %link{ :rel => :stylesheet, :href => url('/css/style.css') }
+    :javascript
+        window.onload = function() {
+            var a=document.getElementsByTagName("a");
+            for(var i=0;i<a.length;i++)
+            {
+                a[i].onclick=function()
+                {
+                    window.location=this.getAttribute("href");
+                    return false
+                }
+            }
+        }
+    - if @full_page == true
+        :css
+            html, body { height: 100%; }
+    %meta{ :name => 'apple-mobile-web-app-capable', :content => :yes }
+    %meta{ :name => 'apple-mobile-web-app-status-bar-style', :content => 'black' }
+    %meta{ :name => 'viewport', :content => 'width=320px, initial-scale=1, maximum-scale=1, minimum-scale=1' }
+
+%body
+    = yield

@@ -1,0 +1,129 @@
+* {
+   -webkit-text-size-adjust: none;
+   text-rendering: optimizeLegibility;
+   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+   font-weight: 300;
+}
+
+html,
+body { 
+   background-color: black; 
+   color: white;
+   margin: 0;            
+   padding: 0;
+   text-align: center;
+}
+
+a {
+   color: white;
+   text-decoration: none;
+}
+
+a:hover {
+   color: #ddd !important;
+}
+
+.wrap {
+   max-width: 500px;
+   margin: 4% auto;
+   padding: 0 4%;
+}
+
+table {
+   border-spacing: 0;
+   width: 100%;
+   margin: 0;
+}
+
+table.list,
+table.bar {
+   border: 1px solid gray;
+}
+
+table.list td,
+table.bar td {
+   border-bottom: 1px solid #333;
+   padding: 0 1em;
+}
+
+td.w {
+   width: 1.5em;
+}
+
+td.w input {
+   text-align: right;
+}
+
+td.d {
+   width: 1em;
+   text-align: center;
+   cursor: pointer;
+}
+
+td.l {
+    border: none;
+}
+
+td.stage {
+    font-size: 500%;
+    color: white;
+    text-align: center;
+    font-family: "HelveticaNeue-UltraLight", "Helvetica Neue Ultra Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 100;
+    padding: 0;
+    margin: 0;
+    word-wrap: break-word;
+    cursor: pointer;
+    vertical-align: center;
+}
+
+table.bar h1 {
+   text-align: center;
+   width: 100%;
+   padding: 1em;
+   margin: 0 -1em;
+   border: none;
+   background: none;
+   color: white;
+   font-size: 1em;
+   outline: none;
+}
+
+td.right,
+td.left {
+   width: 4em;
+}
+
+input {
+   width: 100%;
+   padding: 1em;
+   margin: 0 -1em;
+   border: none;
+   background: none;
+   color: white;
+   font-size: 1em;
+   outline: none;
+}
+
+input[type=submit],
+input[type=button] {
+   text-align: left;
+   cursor: pointer;
+   margin: 0;
+   padding: 1em 0;
+}
+
+input[type=submit]:hover,
+input[type=button]:hover {
+   color: #ddd;
+}
+
+td.action {
+   color: white;
+   border: 1px solid gray;
+   text-decoration: none;
+   padding: 0.8em 1em;
+   width: 1em;
+   height: 1em;
+   cursor: pointer;
+}
