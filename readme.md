@@ -3,4 +3,4 @@ Pick4Me is a restaurant (or whatever you want) picker app, developed in about an
 Enjoy!
 
 ![Screenshot of picker view](http://cl.ly/0a0U1B3X1x1H0B3E262p/picker.png)
-![Screenshot of edit view](http://cl.ly/0C1i0Y0j3j160b392A1y/edit.png)
+<!-- ![Screenshot of edit view](http://cl.ly/0C1i0Y0j3j160b392A1y/edit.png) -->
